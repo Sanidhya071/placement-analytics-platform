@@ -57,34 +57,34 @@ export default async function StudentDashboard() {
   const readinessTier = getReadinessTier(breakdown.totalScore);
 
   // Stats for cards
-  const stats = [
+const stats = [
   {
     label: "Current CGPA",
     value: profile.cgpa.toFixed(2),
     icon: "🎓",
-    color: "#dbeafe",
-    text: "#2563eb",
+    color: "rgba(59,130,246,0.15)",
+    text: "#60a5fa",
   },
   {
     label: "Skills Added",
     value: profile.skills.length,
     icon: "🛠️",
-    color: "#dcfce7",
-    text: "#16a34a",
+    color: "rgba(34,197,94,0.15)",
+    text: "#22c55e",
   },
   {
     label: "DSA Score",
     value: `${profile.dsaScore}%`,
     icon: "💻",
-    color: "#cffafe",
-    text: "#0891b2",
+    color: "rgba(6,182,212,0.15)",
+    text: "#06b6d4",
   },
   {
     label: "Applications",
     value: profile.applications.length,
     icon: "📤",
-    color: "#fef3c7",
-    text: "#d97706",
+    color: "rgba(245,158,11,0.15)",
+    text: "#f59e0b",
   },
 ];
 
@@ -119,9 +119,9 @@ export default async function StudentDashboard() {
       key={i}
       className="card stat-card"
       style={{
-        background:
-          "linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,250,252,0.95))",
-      }}
+  background:
+    "linear-gradient(135deg, rgba(17,25,40,0.95), rgba(30,41,59,0.95))",
+}}
     >
       <div
         className="stat-icon"
@@ -173,11 +173,8 @@ export default async function StudentDashboard() {
         <div
   className="card glass"
   style={{
-    gridColumn: "span 2",
-    background:
-      "linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,250,252,0.98))",
-    border: "1px solid rgba(37,99,235,0.08)",
-  }}
+  gridColumn:"span 2",
+}}
 >
   <div className={styles.cardHeader}>
     <h3>🎯 Placement Readiness Score</h3>
@@ -350,7 +347,7 @@ export default async function StudentDashboard() {
   style={{
     marginTop: "2rem",
     background:
-      "linear-gradient(135deg, #eff6ff, #ffffff)",
+  "linear-gradient(135deg, rgba(17,25,40,0.95), rgba(30,41,59,0.95))",
     border: "1px solid rgba(37,99,235,0.08)",
   }}
 >
@@ -387,12 +384,10 @@ export default async function StudentDashboard() {
 <div
   className="card glass"
   style={{
-    display: "flex",
-    flexDirection: "column",
-    gap: "1.5rem",
-    background:
-      "linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,250,252,0.98))",
-  }}
+  display:"flex",
+  flexDirection:"column",
+  gap:"1.5rem",
+}}
 >
   <div className={styles.cardHeader}>
     <h3>🚀 Career Readiness Actions</h3>
@@ -468,7 +463,7 @@ export default async function StudentDashboard() {
       style={{
         marginTop: "1rem",
         background:
-          "linear-gradient(135deg,#eff6ff,#ffffff)",
+  "linear-gradient(135deg, rgba(17,25,40,0.95), rgba(30,41,59,0.95))",
       }}
     >
       <h4>📈 Placement Forecast</h4>
@@ -503,10 +498,8 @@ export default async function StudentDashboard() {
 <div
   className="card"
   style={{
-    marginTop: "2rem",
-    background:
-      "linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,250,252,0.98))",
-  }}
+  marginTop:"2rem",
+}}
 >
   <div
     style={{

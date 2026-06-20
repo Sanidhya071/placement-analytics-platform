@@ -87,6 +87,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position:relative;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:radial-gradient(circle,rgba(59,130,246,0.18),transparent 70%);
+  top:-150px;
+  left:-150px;
+  z-index:-1;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:radial-gradient(circle,rgba(124,58,237,0.18),transparent 70%);
+  bottom:-150px;
+  right:-150px;
+  z-index:-1;
 }
 
 .tag {
@@ -147,25 +170,16 @@
   margin-top: 2rem;
 }
 
-.features .card {
-  background: rgba(17, 25, 40, 0.75);
-
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-
-  border: 1px solid rgba(255,255,255,0.08);
-
-  box-shadow:
-    0 8px 32px rgba(0,0,0,0.35);
-
-  transition: all 0.3s ease;
+.features .card{
+  background:rgba(17,25,40,0.75);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(20px);
+  border-radius:20px;
 }
 
-.features .card:hover {
-  transform: translateY(-10px);
-
-  box-shadow:
-    0 20px 40px rgba(99,102,241,0.2);
+.features .card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 12px 30px rgba(124,58,237,0.20);
 }
 
 .featureIcon {
